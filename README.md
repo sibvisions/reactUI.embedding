@@ -3,9 +3,12 @@
 Embed [reactUI](https://github.com/sibvisions/reactUI/) into another [react application](https://github.com/arnab-datta/counter-app). It's only a demo application to show how embedding is possible.
 
 ## Dev Setup
+- run `npm install` in your reactUI and reactUI.embedding projects
 - run `npm link` in your reactUI directory
-- run `npm link reactUI` in your reactUI.example directory
-- run `npm link ../reactUI/node_modules/react` in your reactUI.example directory to prevent react collision errors
+- run `npm link reactUI` in your reactUI.embedding directory
+- run `npm link ../reactUI/node_modules/react` in your reactUI.embedding directory to prevent react collision errors
+- run `npm run bundle` in your reactUI directory to update the lib
+- run `npm start` in your reactUI.embedding directory
 
 ## Example
 If you want to embed ReactUI in your react project import the ReactUI component and pass the `embedded` property. Then it is also required to add embeddedOptions to launch the correct application, set the baseUrl to communicate with the server, language and authentication.

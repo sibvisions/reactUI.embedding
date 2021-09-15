@@ -48,13 +48,15 @@ const App = () => {
   };
 
   const onLogin = () => {
-    api.addScreenWrapper("CouWel-LV", <ScreenWrapperTest/>)
+    api.addScreenWrapper("CouWel-LV", <ScreenWrapperTest/>);
   }
 
-  const handleButtonClick = () => {
-    const insertReq = createInsertRecordRequest();
-    insertReq.dataProvider = "countertest/CouWel-LV/counterwelcome#0";
-    api.sendRequest(insertReq, REQUEST_ENDPOINTS.INSERT_RECORD);
+  const handleInsertClick = () => {
+    api.insertRecord("CouWel-LV", "countertest/CouWel-LV/counterwelcome#0");
+  }
+
+  const handleDeleteClick = () => {
+    api.deleteRecord("CouWel-LV", "ouWel-LV_NT_counterwelcome", "countertest/CouWel-LV/counterwelcome#0");
   }
 
   return (
@@ -72,7 +74,8 @@ const App = () => {
           onRestart={handleRestart}
         />
         <div> 
-          <button className="btn btn-info m-2" onClick={handleButtonClick}>Insert new Record!</button>
+          <button className="btn btn-info m-2" onClick={handleInsertClick}>Insert new Record!</button>
+          <button className="btn btn-danger m-2" onClick={handleDeleteClick}>Delete Record!</button>
         </div>
         <ReactUI style={{height: '500px'}} onLogin={onLogin} embedded embeddedOptions={{appName:"countertest", baseUrl:"http://localhost/services/mobile", language:"de", userName:"admin", password:"admin"}}/>
       </main>
