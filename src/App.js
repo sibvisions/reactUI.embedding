@@ -73,7 +73,7 @@ const App = () => {
           onDelete={handleDelete}
           onRestart={handleRestart}
         />
-        <div> 
+        <div className="btnwrapper"> 
           <button className="btn btn-info m-2" onClick={handleInsertClick}>Insert new Record!</button>
           <button className="btn btn-danger m-2" onClick={handleDeleteClick}>Delete Record!</button>
         </div>
