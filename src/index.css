@@ -21,3 +21,7 @@ code {
 .btnwrapper {
   margin-bottom: 1rem;
 }
+
+.login-cbx-container label {
+  margin-bottom: 0;
+}

@@ -11,10 +11,10 @@ Embed [reactUI](https://github.com/sibvisions/reactUI/) into another [react appl
 - run `npm start` in your reactUI.embedding directory
 
 ## Example
-If you want to embed ReactUI in your react project import the ReactUI component and pass the `embedded` property. Then it is also required to add embeddedOptions to launch the correct application, set the baseUrl to communicate with the server, language and authentication.
+If you want to embed ReactUI in your react project import the ReactUI component and pass the `embedOptions` property. The embedOptions property is used to launch the correct application, set the baseUrl to communicate with the server, language and authentication.
 
-### embeddedOptions properties
-In general embeddedOptions is not typed so it is possible to add any properties to it, but there are some which are necessary, pay attention to typing and casing!
+### embedOptions properties
+In general embedOptions is not typed so it is possible to add any properties to it, but there are some which are necessary, pay attention to typing and casing!
 Parameter | Type | Description
 --- | --- | --- |
 appName | string | Name of the application you want to launch.
@@ -41,7 +41,7 @@ password | string | The password used for authentication
         <div> 
           <button className="btn btn-info m-2" onClick={handleButtonClick}>Insert new Record!</button>
         </div>
-        <ReactUI style={{height: '500px'}} onLogin={onLogin} embedded embeddedOptions={{appName:"countertest", baseUrl:"http://localhost/services/mobile", language:"de", userName:"admin", password:"admin"}}/>
+        <ReactUI style={{height: '500px'}} onLogin={onLogin} embedOptions={{appName:"countertest", baseUrl:"http://localhost/services/mobile", language:"de", userName:"admin", password:"admin"}}/>
       </main>
     </div>
   );
