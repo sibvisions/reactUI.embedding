@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import NavBar from "./components/navbar";
 import Counters from "./components/counters";
-import { createInsertRecordRequest, ReactUI, useAPI, REQUEST_ENDPOINTS } from 'reactUI/dist/moduleIndex'
+import { ReactUI, useAPI } from '@sibvisions/reactui';
 import 'primeicons/primeicons.css';
 import ScreenWrapperTest from "./components/ScreenWrapperTest";
 
@@ -48,15 +48,15 @@ const App = () => {
   };
 
   const onLogin = () => {
-    api.addScreenWrapper("CouWel-LV", <ScreenWrapperTest/>);
+    api.addScreenWrapper("EmbExa-K2", <ScreenWrapperTest/>);
   }
 
   const handleInsertClick = () => {
-    api.insertRecord("CouWel-LV", "countertest/CouWel-LV/counterwelcome#0");
+    api.insertRecord("EmbExa-K2", "countertest/EmbExa-K2/embedexample#0");
   }
 
   const handleDeleteClick = () => {
-    api.deleteRecord("CouWel-LV", "ouWel-LV_NT_counterwelcome", "countertest/CouWel-LV/counterwelcome#0");
+    api.deleteRecord("EmbExa-K2", "EmbExa-K2_NT_embedexample", "countertest/EmbExa-K2/embedexample#0");
   }
 
   return (

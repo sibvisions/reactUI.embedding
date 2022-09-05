@@ -1,5 +1,5 @@
 import React from "react";
-import { ScreenWrapper, useScreen } from "reactUI/dist/moduleIndex"
+import { ScreenWrapper, useScreen } from '@sibvisions/reactui';
 import CustomCounter from "./CustomCounter";
 
 const ScreenWrapperTest = (props) => {
