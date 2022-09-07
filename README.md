@@ -19,9 +19,7 @@ Parameter | Type | Description
 --- | --- | --- |
 appName | string | Name of the application you want to launch.
 baseUrl | string | The url which will be used to communicate with the server.
-language | string | The language code which will be used for translation.
-userName | string | The username which will be used for authentication
-password | string | The password used for authentication
+langCode | string | The language code which will be used for translation.
 
 ```typescript
   return (
