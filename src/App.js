@@ -77,7 +77,7 @@ const App = () => {
           <button className="btn btn-info m-2" onClick={handleInsertClick}>Insert new Record!</button>
           <button className="btn btn-danger m-2" onClick={handleDeleteClick}>Delete Record!</button>
         </div>
-        <ReactUI style={{height: '500px'}} onLogin={onLogin} embedOptions={{ appName:"countertest", baseUrl:"http://localhost/services/mobile", langCode:"de" }}/>
+        <ReactUI style={{height: '500px'}} onLogin={onLogin} embedOptions={{ appName:"countertest", baseUrl:"http://localhost/services/mobile", langCode:"en" }}/>
       </main>
     </div>
   );
