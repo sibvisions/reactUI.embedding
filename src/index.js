@@ -1,9 +1,15 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import "bootstrap/dist/css/bootstrap.css";
 import "font-awesome/css/font-awesome.css";
 import '@sibvisions/reactui/main.css'
 
-ReactDOM.render(<App />, document.getElementById("root"));
+/** Rendering the application */
+const root = ReactDOM.createRoot(document.getElementById("root"));
+export default root.render(
+  //<React.StrictMode>
+    <App />
+  //</React.StrictMode>
+);
